@@ -4,11 +4,12 @@ export interface IQueue<T> {
     peek(): T | undefined;
     length(): number;
     setCapacity(capacity:Number): void;
-    getCapacity(): void;
+    getCapacity(): number;
   }  
 
 export enum QueueErrorType {
-    QueueMaxSizeReached = "QueueMaxSizeReached!"
+    QueueMaxSizeReached = "QueueMaxSizeReached!",
+    QueueNoElement = "No elements in list"
 }
 
 export class QueueError extends Error {
@@ -17,6 +18,6 @@ export class QueueError extends Error {
       this.name = errorType;
       Object.setPrototypeOf(this, QueueError.prototype);
     }
-  }
+}
   
  

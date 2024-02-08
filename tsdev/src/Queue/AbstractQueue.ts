@@ -2,6 +2,7 @@ import { IQueue } from "./Queue.interface";
 
  /* istanbul ignore next */
 export abstract class AbstractQueue<T> implements IQueue<T> {
+    
     enqueue(item: T): void {
         throw new Error("Method not implemented.");
     }
